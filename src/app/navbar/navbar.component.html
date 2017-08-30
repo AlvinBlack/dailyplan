@@ -1,14 +1,14 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
-  <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/homepage" href="#">DailyPlan</a>
+  <div class="navbar-header " (click)="select(0)" [ngClass]="{'activated':selectedNum===0}">
+      <a class="navbar-brand "  routerLink="/homepage" >DailyPlan</a>
   </div>
   <div>
       <ul class="nav navbar-nav">
-          <li class="active"  ><a routerLink="/mypage"  >我的主页</a></li>
-          <li><a routerLink="memberlist">成员列表</a></li>
-          <li><a routerLink="/performance">成果统计</a></li>
-          <li><a >par4</a></li>
+          <li (click)="select(1)" [ngClass]="{'activated':selectedNum===1}"><a routerLink="/mypage"  >我的主页</a></li>
+          <li (click)="select(2)" [ngClass]="{'activated':selectedNum===2}"><a routerLink="membersdisplay">成员展示</a></li>
+          <li (click)="select(3)" [ngClass]="{'activated':selectedNum===3}"><a routerLink="/performance">成果统计</a></li>
+          <li (click)="select(4)" [ngClass]="{'activated':selectedNum===4}"><a >par4</a></li>
       </ul>   
   </div>
   </div>

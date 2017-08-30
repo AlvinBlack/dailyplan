@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MyPageComponent } from './my-page/my-page.component';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './members-display/member-list/member-list.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { PerformanceComponent } from './performance/performance.component';
-import { AppService } from './app.service'
+import { AppService } from './app.service';
+import { MembersDisplayComponent } from './members-display/members-display.component';
+import { PlanDetailComponent } from './plan-detail/plan-detail.component'
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AppService } from './app.service'
     MyPageComponent,
     MemberListComponent,
     PerformanceComponent,
+    MembersDisplayComponent,
+    PlanDetailComponent,
   ],
   imports: [
     BrowserModule,
