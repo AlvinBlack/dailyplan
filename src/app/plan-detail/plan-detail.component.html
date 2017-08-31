@@ -1,3 +1,34 @@
-<p>
-  plan-detail works!
-</p>
+<div *ngIf = "id">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{dayItems.date|date:'yyyy-MM-dd'}}</h3>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped table-bordered table-hover">
+        <tr>
+          <th>序号</th>
+          <th>内容</th>
+          <th>用时(h)</th>
+          <th>优先级</th>
+          <th>百分比</th>
+          <th>标签</th>
+        </tr>
+        <tr *ngFor="let item of dayItems.pubItem">
+          <td>{{item.num}}</td>
+          <td>{{item.content}}</td>
+          <td>{{item.hours}}</td>
+          <td>{{item.priority}}</td>
+          <td>{{item.percentage}}</td>
+          <td><span *ngFor="let tag of item.tag"class="label label-primary">{{tag}}</span></td>
+        </tr>
+      </table> 
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

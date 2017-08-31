@@ -9,11 +9,15 @@ import { MemberService } from '../../member.service';
   providers:[MemberService]
 })
 export class MemberListComponent implements OnInit {
-  members;
+  private members;
+  private selectedId = 0;
   constructor(private memberService: MemberService) { }
   
   ngOnInit() {
     this.members = this.memberService.getMembers();
+  }
+  select(num){
+    this.selectedId = num;
   }
 
 }

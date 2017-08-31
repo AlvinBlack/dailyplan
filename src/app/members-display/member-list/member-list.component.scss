@@ -1,3 +1,15 @@
 .memberlist{
     width:20%;
+    position: absolute;
+    left:5%;
+}
+plan-detail {
+    position: absolute;
+    left:30%
+}
+td{
+    cursor: pointer;
+}
+a:focus,a:hover{
+    background-color:red
 }
